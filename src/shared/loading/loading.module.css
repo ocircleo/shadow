@@ -1,0 +1,38 @@
+.cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+}
+.ro{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border-width: 8px;
+    border-color: transparent;
+}
+.ff{
+    border-top-color:  rgb(250, 46, 46) ;
+    z-index: 11;
+    animation: aniff 2.1s linear 0s infinite;
+}
+.ffs{
+    border-top-color: green ;
+    z-index: 12;
+    animation: aniff 2.1s linear .7s infinite;
+}
+.ffd{
+    border-top-color:  rgb(253, 195, 21);
+    z-index: 13;
+    animation: aniff 2.1s linear 1.4s infinite;
+}
+@keyframes aniff {
+    100%{transform: rotate(-360deg);}
+}
