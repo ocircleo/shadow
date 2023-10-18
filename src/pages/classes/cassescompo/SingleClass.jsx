@@ -46,9 +46,9 @@ const SingleClass = ({ data }) => {
         <h2 className="card-title">{courseName}</h2>
         <p>Instractor: <span className="font-semibold">{isntractor}</span></p>
         <p>Email: {email}</p>
-        <p className="text-green-600 capitalize">price: {price} seats: {seats}</p>
+        <p className="text-red-600 capitalize">price: {price} seats: {seats}</p>
         <div className="card-actions justify-end">
-          <button className={` btn   ${added == true ? 'btn-disabled' : 'btn-primary'}`} onClick={addToCart}>{!user ? 'Please login' : added ? "unavailable" : 'Add to cart'}</button>
+          <button className={` btn btn-error  ${added == true ? 'btn-disabled' : 'btn-primary'}`} onClick={addToCart}>Unavailable</button>
         </div>
       </div>
     </div>

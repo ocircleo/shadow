@@ -69,8 +69,6 @@ const Provider = ({ children }) => {
       .then((data) => {
         setuserRole(data);
         setLoading(false);
-
-        console.log(data)
       })
       .catch((err) => console.log(err.message));
   }, [user, userRefetch]);

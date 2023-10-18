@@ -9,7 +9,7 @@ const CoursesHome = () => {
     }, [])
     return (
         <>
-         <h2 className='text-center font-semibold text-4xl capitalize py-4'>Our popular classes</h2>
+         <h2 className='text-center font-semibold text-3xl capitalize py-4'>Our classes</h2>
             <div className="flex gap-3 flex-wrap mx-auto items-center justify-center my-5">
                 {
                     carts.map(element => <CoursesCartH key={element._id} data={element}></CoursesCartH>)

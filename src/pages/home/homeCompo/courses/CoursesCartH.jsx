@@ -5,7 +5,7 @@ import { Authcontext } from "../../../../private/provider/Provider";
 const CoursesCartH = ({ data }) => {
   const { userRole, user, userRefetch, setUserRefetch } = useContext(Authcontext)
   let [added, setAdded] = useState(false)
-  console.log(userRole)
+
 
   let { _id, courseName, seats, price, imgUrl, isntractor, email } = data
   const addToCart = () => {
@@ -31,7 +31,6 @@ const CoursesCartH = ({ data }) => {
   useEffect(() => {
     let cart = userRole?.cart || [];
     cart.forEach(element => {
-      console.log(element)
       if (element == _id) {
         setAdded(true)
       }
@@ -47,9 +46,9 @@ const CoursesCartH = ({ data }) => {
         <h2 className="card-title">{courseName}</h2>
         <p className="capitalize">Instractor: <span className="font-semibold">{isntractor}</span></p>
         <p className="capitalize">emailL {email}</p>
-        <p className="text-green-600 capitalize">price: {price} seats: {seats}</p>
+        <p className="text-red-600 capitalize">price: {price} seats: {seats}</p>
         <div className="card-actions justify-end">
-          <button className={` btn   ${added == true ? 'btn-disabled' : 'btn-primary'}`} onClick={addToCart}>{!user ? 'Please login' : !added ? "unavailable" : 'Add to cart'}</button>
+          <button className={` btn  btn-error  ${added == true ? 'btn-disabled' : 'btn-primary'}`} onClick={addToCart}>Unavailable</button>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ const Instractors = () => {
     }, [])
     return (
         <>
-            <h2 className='text-center font-semibold text-4xl capitalize py-4'>Our top Instractors</h2>
+            <h2 className='text-center font-semibold text-3xl capitalize py-4'>Our Instractors</h2>
         <div className="flex gap-3 flex-wrap mx-auto items-center justify-center my-5">
             {
                 instractors.map(element => <InstractorsCard key={element._id} data={element}></InstractorsCard>)

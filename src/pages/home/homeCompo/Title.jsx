@@ -10,9 +10,9 @@ const Title = () => {
             welcome to <span>triolingo</span>
           </h2>
           <p>
-            Gateway to Multilingual Proficiency: Expanding Horizons, Empowering <br></br>
-            Minds, and Connecting Cultures at the Premier International Language
-            Institute
+            We teach people how to talk foreign language and make them <br></br>
+            confident. If your looking for a course to learn your desired 
+            language just buy one.
           </p>
         </div>
       

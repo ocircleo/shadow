@@ -4,7 +4,6 @@ import { Authcontext } from "../../private/provider/Provider";
 import { MdAccountBox } from "react-icons/md";
 const Navbar = () => {
   const { user, signout, userRole } = useContext(Authcontext);
-  console.log(user);
   const navlinks = (
     <>
       <li>
@@ -55,18 +54,16 @@ const Navbar = () => {
           <span className="text-red-500 text-xl md:text-5xl">L</span>ingo{" "}
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navlinks}</ul>
-      </div>
       {user ? (
         <>
           <div className="navbar-end gap-4 ">
+          <ul className="hidden lg:flex menu menu-horizontal px-1">{navlinks}</ul>
             <div className="dropdown">
               <label tabIndex={1} className="btn btn-ghost">
                 <img
                   src={user.photoURL}
                   alt=""
-                  className=" h-[40px] w-[40px] md:h-[60px] md:w-[60px] bg-orange-100 border-[2px] md:border-[4px] border-blue-300 rounded-full"
+                  className=" h-[40px] w-[40px] md:h-[60px] md:w-[60px] bg-red-100 border-[2px] md:border-[4px] border-red-300 rounded-full"
                 />
               </label>
               <div
